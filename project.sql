@@ -1,3 +1,4 @@
-CREATE DATABASE hostels{
-    
-}
+CREATE DATABASE IF NOT EXISTS hostels;
+
+ENGINE = InnoDB;
+

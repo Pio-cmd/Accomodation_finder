@@ -10,7 +10,7 @@ $servername ="localhost";
 $conn = new mysqli($servername,$username,$password,$dbname);
 
 if( $conn->connect_error){
-	die("connection failier". $conn->connect_error);
+	die("connection failure". $conn->connect_error);
 }
 
 $sql = "
@@ -26,7 +26,6 @@ create table Owner_details(
 $sql .= "
 create table area(
 	pincode varchar(6),
-	No_of_pgs null,
 	city varchar(20),
 	no_of_hostels int,
 	locality varchar(20),
@@ -39,11 +38,9 @@ create table Hostel(
 	H_name varchar(20),
 	Pincode char(6),
 	Type varchar(10),
-	Hostel boolean,
 	Curfew time,
 	Fees int,
 	Phone_number varchar(10),
-	Total_no_of_rooms int,
 	Capacity int,
 	foreign key(Pincode) references Area(Pincode),
 	foreign key(Phone_number) references Owner_details(Phone_number)
@@ -51,20 +48,7 @@ create table Hostel(
 );
 ";
 $sql .= "
-create table mess(
-	no_of_meals int,
-	Mess_fees int,
-	Mess_capacity int,
-	Veg boolean,
-	Schedule blob,
-	ID int,
-	foreign key(ID) references Hostel(ID)
-);";
-
-$sql .= "
 create table Room_types(
-	Attached_Bathroom Boolean,
-	AC boolean,
 	Room_capacity int,
 	Fees int,
 	Wifi boolean,
