@@ -77,7 +77,7 @@ Hostel,
 Curfew,
 Fees,
 Phone_number,
-Capacity) values('".$_POST["name"]."','".$_POST["pincode"]."','".$_POST["type"]."','".$_POST["hostel_pg"]."','".$_POST["curfew"]."','".$_POST["fees"].'",'".$_POST["owner_phone"]."','".$_POST["capacity"]."');";
+Capacity)" values('".$_POST["name"]."','".$_POST["pincode"]."','".$_POST["type"]."','".$_POST["hostel_pg"]."','".$_POST["curfew"]."','".$_POST["fees"].'",'".$_POST["owner_phone"]."','".$_POST["capacity"]."');";
 
 
 if($conn->query($sql)){
